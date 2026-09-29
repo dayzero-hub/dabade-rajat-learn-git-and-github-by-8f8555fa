@@ -8,3 +8,11 @@ Thumbs.db
 
 # Ticket 4 asks you to add two more entries here, with a comment above each
 # saying why. Read the ones above first: each says WHY, not just WHAT.
+
+# Python virtual environments are rebuilt from requirements.txt on any machine,
+# so committing them just bloats the repo with files that differ per OS.
+.venv/
+
+# .env holds secrets — API keys, tokens, passwords. These must never enter history:
+# once pushed, a secret is public and stays in old commits even after deletion.
+.env

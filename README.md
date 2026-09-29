@@ -66,3 +66,13 @@ the exercise for you.
 
 (If you are an engineer auditing the templates: this is not the thin-template gap that DZ-382
 fixed elsewhere. It is a decision, recorded here so it does not get "fixed".)
+
+## What .gitignore is for
+
+`.gitignore` lists the paths git should never track — machine-generated output, editor
+settings, OS junk, and above all anything holding a secret. Keeping them out keeps the repo
+small, portable and safe to share.
+
+Deleting a committed secret does **not** fix the leak: git keeps every past commit, so the
+secret still sits in history and anyone with the repo can read it — the only real fix is to
+rotate the key so the leaked one no longer works.
